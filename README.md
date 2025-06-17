@@ -1,19 +1,25 @@
-# Aircare-Platform-TIG-stack-
-This repository contains the instructions and configuration files needed to set up a TIG (Telegraf, InfluxDB, and Grafana) infrastructure for collecting, storing, and visualizing data from an air quality monitoring sensor, specifically the Aircare device, as part of environmental measurement campaigns.
+## 🚀 How to Recreate the TIG Infrastructure
 
-To recreate the TIG infrastructure, follow these steps:
+Follow these steps:
 
-	1.	Clone the repository to your local machine using the command:
-		git clone https://github.com/francesco2111/Aircare-Platform-TIG-stack-.git
+1. **Clone the repository to your local machine**
+   ```bash
+   git clone https://github.com/francesco2111/Aircare-Platform-TIG-stack-.git
 
-	2.	Open a terminal and navigate to the newly cloned folder:
-		cd Aircare-Platform-TIG-stack-
+2.	**Navigate to the project directory**
+    ```bash
+    cd Aircare-Platform-TIG-stack-
+    
+3.	**Edit the .env file**
+    Update the environment variables to configure and deploy the stack according to your requirements.
 
-	3.	Edit the .env file to update the environment variables used for configuring and deploying the stack.
+4.	**Customize the telegraf.conf file**
 
-	4.	Customize the telegraf.conf file, which will be mounted into the container as a persistent volume, to tailor the configuration to your data source.
+    This file will be mounted into the Telegraf container as a persistent volume.
 
-	5.	Launch the infrastructure by running the command:
-		docker-compose up -d --build
-  
-This will build the Docker containers and start the Telegraf, InfluxDB, and Grafana services.
+    Adapt it to fit your specific data source (e.g., the Aircare sensor).
+
+5.	**Build and run the infrastructure**
+    ```bash
+    docker-compose up -d --build
+This command will build the Docker containers and start the Telegraf, InfluxDB, and Grafana services.
